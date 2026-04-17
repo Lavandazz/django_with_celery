@@ -1,0 +1,28 @@
+# Виртуальное окружение
+venv/
+venv_*/
+.env/
+
+# Файлы с секретами и локальными настройками
+.env
+.env.local
+*.conf
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Файлы IDE
+.idea/
+.vscode
+
+media/
+
+# Секреты
+utils/mail.py
+utils/mail_list.py
+
+# db
+db.sqlite3
