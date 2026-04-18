@@ -1,3 +1,4 @@
+
 import logging
 
 from yookassa import Payment, Configuration
@@ -38,8 +39,10 @@ def pay_yookassa(order_id: int, total_price: int, return_url):
             },
         )
         logger.info('Оплата заказа %s', order_name)
+
         # payment возвращается объект платежа с номером и статусом pending
         return payment
     except Exception as e:
         logger.warning('Ошибка при оплате заказа %s: %s', order_name, e)
+
 

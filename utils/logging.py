@@ -35,5 +35,9 @@ LOGGERS_DICT = {
             "class": "django.utils.log.AdminEmailHandler",
             "include_html": True,
         },
+        'tasks': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
     },
 }

@@ -37,7 +37,19 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = True
 LOGGING = LOGGERS_DICT
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.ru.tuna.am',
+    '127.0.0.1',
+]
+# Доверительные домены (для туннелирования)
+CSRF_TRUSTED_ORIGINS = [
+    'https://.ru.tuna.am',  
+]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Для HTTPS через туннель
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 
 # Application definition
 

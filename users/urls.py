@@ -16,11 +16,12 @@ Including another URLconf
 """
 
 from django.urls import path
+from . import views
 
-from users.views import CreatePayView, MainView, MyLoginView
 
 urlpatterns = [
-    path("", MainView.as_view(), name='home'),
-    path("login/", MyLoginView.as_view(), name='login'),
-    path("pay/", CreatePayView.as_view(), name='pay')
+    path("", views.MainView.as_view(), name='home'),
+    path("login/", views.MyLoginView.as_view(), name='login'),
+    path("pay/", views.CreatePayView.as_view(), name='pay'),
+    path('payment/yookassa-webhook/', views.yookassa_webhook, name='yookassa-webhook')
 ]
