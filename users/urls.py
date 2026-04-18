@@ -17,9 +17,10 @@ Including another URLconf
 
 from django.urls import path
 
-from users.views import MainView, MyLoginView
+from users.views import CreatePayView, MainView, MyLoginView
 
 urlpatterns = [
     path("", MainView.as_view(), name='home'),
-    path("login/", MyLoginView.as_view(), name='login')
+    path("login/", MyLoginView.as_view(), name='login'),
+    path("pay/", CreatePayView.as_view(), name='pay')
 ]

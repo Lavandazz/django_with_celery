@@ -9,3 +9,5 @@ from utils.mail import send_message
 def delay_send_message():
     send_message()
     print('письмо отправлено')
+
+

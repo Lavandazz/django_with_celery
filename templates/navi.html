@@ -3,9 +3,9 @@
 {% block navigation %}
     <nav class="navbar navbar-expand-lg sticky-top">
         <!-- Кнопка-гамбургер для мобильных -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        {% comment %} <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> {% endcomment %}
     
         <!-- Логотип слева -->
         <a class="navbar-brand" href="#">
@@ -31,7 +31,9 @@
             </ul>
             <div class="d-flex">
               <a href="/login" class="btn btn-danger">Вход</a>
+              <a href="/pay" class="btn btn-danger">Купить</a>
             </div>
+
         </div>
   
     </nav>

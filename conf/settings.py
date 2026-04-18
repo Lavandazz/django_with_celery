@@ -13,6 +13,8 @@ from pathlib import Path
 import os
 import environ
 
+from utils.logging import LOGGERS_DICT
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,9 +35,9 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+LOGGING = LOGGERS_DICT
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -122,6 +124,13 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+# Settings Yookassa
+YOO_ID = env('YOO_ID')
+YOO_SECRET_KEY = env ('YOO_SECRET_KEY')
+
+# Settings Admins
+ADMINS = [env('SOUPERADMIN'), ]
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
