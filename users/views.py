@@ -1,3 +1,9 @@
+"""
+Для получения вебхуков от юкассы необзодимо настроить туннелирование.
+Команда tuna http 8080 в терминале
+"""
+
+
 import logging
 import json
 from django.contrib import messages
